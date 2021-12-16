@@ -1,10 +1,122 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap");
 
+@media (min-width: 1094.98px){
+    body{
+    max-width: 1400px;
+    margin: auto;
+    }
+    header{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    }
+    header > img{
+    height: 80px !important;
+    }
+    header, #reservezLeMenu {
+    padding-right: 0px !important;
+    padding-left: 0 !important;
+    }
+    #reservezLeMenu{
+    width: 100% !important;
+    margin-left: 2% ;
+    }
+    #localisation{
+    width: 100% !important;
+    }
+    .boutonRose{
+    margin: auto !important;
+    width: 40% !important;
+    height: 40px !important;
+    }
+    .restaurantBulle{
+    height: 450px !important;
+    }
+ 
+}
+
+@media (min-width: 650px) and (max-width: 1094.0px){
+    body{
+    }
+    header{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    }
+    #reservezLeMenu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100% !important;
+    }
+    .boutonRose{
+    width: 50% !important;
+    height: 50px !important;
+    padding: 0 42px 0 42px !important; 
+    }
+    a > img{
+    height: 200px !important;
+    }
+    
+}
 
 @media (max-width: 649.98px){
     body{
     }
+    header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    
+    padding-right: 0   !important;
+    padding-left: 0  !important; 
+    text-align: center ;
+    }
+    #reservezLeMenu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+    #localisation{
+    width:100% ; 
+    justify-content: center !important;
+    }   
+    .boutonRose{
+    width: auto !important;
+    height: 50px !important;
+    padding: 0 12px 0 12px !important; 
+    font-weight: bold;
+    }
+    .fonctionnementChoix{
+    width: 87% !important;
+    margin: 0 10% 5% 10%;
+    }
+    #section2{
+    display: flex;
+    flex-wrap: wrap;
+    }
+    .restaurantBulle{
+    margin: 0 5% 33px 5%;
+    width: 100% !important;
+    height: 250px !important;
+    }
+    a > img{
+    object-fit: cover;
+    width: 100%;
+    height: 70% !important;
+    }
+    footer {
+    padding-left: 35px !important;
+    }
+    footer > img{
+    min-width : 150px !important;/* prof*/ 
+    height: 26px !important;
+    }	    
+    
 }
+
 
 
 
@@ -12,21 +124,33 @@ body{
     background-color: #333333;
     color: white;
     font-family: "Raleway", "Sans serif";
+    margin: auto;
 }
-header{
-    margin-bottom: 20px;
+header,#localisation,#reservezLeMenu,#section1,#section2,footer{
+    padding-right: 15px ;
+    padding-left: 15px ;
 }
+
 header > img{
+    padding-bottom: 20px;
     height: 50px;
 }
 #localisation{
     display: flex;
     align-items: flex-end;
-
+    background: #eaeaea;
+    padding: 20px 0 20px 0;
 }
 #localisation > *{
     margin: 0 5px 0 5px;
-}   
+}
+.barreRecherche {
+    font-size: 100%;
+    font-weight: bold;
+    background: #eaeaea;
+    border:none;
+    width: 100%;
+}
 .boutonRose{
     width: 25%;
     height: 10%;
@@ -36,18 +160,26 @@ header > img{
     justify-content: center;
     align-items: center;/*axe secondaire*/
     
-    background-color: #aa5ddb;    
+    background: linear-gradient(#ed73da, #af5fdb, #b160db);
 }
 .boutonRose:hover{
     color: orange;
     transform: scale(1.027);
 }
+#reservezLeMenu{
+    padding: 20px 0 30px 0;
+}
+main{
+    padding-top: 30px;
+}
 #section1{
     display:flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding: 0 0 50px 12px;
 }
 #section1 > h1{
+    margin-bottom: 30px;
     width: 70%;
 }
 .fonctionnementChoix {
@@ -58,8 +190,8 @@ header > img{
     width: 30%;
 }
 .fonctionnementChoix:hover{
-    color: orange;
-    transform: scale(1.027);
+    color: black;
+    background-color: #f5edff;
 }
 .fonctionnementChoix i{
     margin: 0 5% 0 5%;
@@ -75,10 +207,12 @@ header > img{
     min-width: 25px;
 }
 #section2{
-    margin-bottom: 30px;
+    border: solid white 1px; 
+    padding: 30px 0 30px 0;
 }	
 #section2 > h1{
     width: 70%;
+    padding-left: 30px;
 }
 #section2Bulle{
     display: flex;
@@ -92,10 +226,10 @@ header > img{
     height: 50%;
     margin-bottom: 15px;
 }
-.restaurantBulle > img{
+a > img{
     object-fit: cover;
     width: 100%;
-    height: 200px;
+    height: 80%;
     border: solid white 0px;
     border-radius: 10px 10px 0 0;
 }
@@ -124,11 +258,41 @@ footer{
     height: 30%;
 }
 footer> img{
-    width: 20%;
-    height: 15%;
+    height: 20%;
     margin: 0;
 }
 footer ul{
     list-style-type: none;
 }
+footer li{
+    margin-bottom: 5px;
+}
+ul{
+    padding:0 !important;
+    }.faLi{
+    display: flex;
+}
+.fa-hands-helping, .fa-utensils{
+    width: 30px;
+}
+
+
+
+
+
+
+span{color:orange;}
+
+
+.fa-heart:hover{
+    transform:scale(1.7);
+    
+    font-weight: bold;/*important, c'est pour avoir la couleur a l'interieur du coeur*/
+    background: linear-gradient(#ed73da, #af5fdb, #b160db);
+    -webkit-background-clip: text;/* coeur */
+    -webkit-text-fill-color: transparent;/*no se prq*/
+}
+
+
+
 
