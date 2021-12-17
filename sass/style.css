@@ -26,7 +26,7 @@
     }
     .boutonRose{
     margin: auto !important;
-    width: 40% !important;
+    width: 20% !important;
     height: 40px !important;
     }
     .restaurantBulle{
@@ -171,6 +171,9 @@ header > img{
 }
 main{
     padding-top: 30px;
+    border: solid 1px white;
+    padding-bottom: 100px;
+    background: #111;
 }
 #section1{
     display:flex;

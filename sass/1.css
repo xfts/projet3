@@ -43,7 +43,28 @@
 @media (min-width: 650px) and (max-width: 1094.0px){
     body{
     }
-    
+    #general{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+    #entrees, #plats, #dessert{
+    width: 75%;
+    }
+    #entrees > div{
+    width: 90% !important;
+    }
+    #plats> div{
+    width: 80% !important;
+    }
+    #dessert > div{
+    width: 70% !important;
+    }
+    .boutonRose{
+    width: 45% !important;
+    height: 50px !important;
+    padding: 0 42px 0 42px!important;
+    }
     .menuTitre{
 	width: 70% !important;
 	justify-content: space-around !important;
@@ -204,15 +225,17 @@ section + h3 {
 main{
     margin-bottom: 100px;
 }
-
 footer{
     padding-top: 30px;
+    padding-bottom: 35px !important;
     height: 30%;
+    border: solid 1px white;
     background-color: #3e3e3e;
 }
 footer> img{
     height: 15%;
     padding-left: 20px;
+    margin-bottom: 18px;
 }
 
 footer ul{
