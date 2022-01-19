@@ -1,3 +1,12 @@
+
+/*tmp*/
+body{
+	
+	font-size: 10px;
+}
+/*tmp*/
+
+
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap");
 
 /*A mettre "overflow: hidden;" pr les bulles du menu */
@@ -299,6 +308,135 @@ span{color:orange;}
     -webkit-text-fill-color: transparent;/*no se prq*/
 }
 
+
+
+/*####################  Opening  ######################*/
+ 
+
+.opening{
+    color: white;
+	background: #363636;
+	
+	width: 100%;
+	height: 100vh;
+	animation: changeBg 3s linear 1;
+	display: grid;
+	place-items: center;
+
+}
+
+
+@keyframes changeBg{
+	0%{
+		background-color: black;
+	}
+
+	80%{
+		background-color: #363636;
+	}
+	100%{
+		background-color: opacity;/*a regler */
+		/*demander mentor pour le display : none SURTOUT*/
+	}
+}
+
+
+.loader {
+	border: 13px solid transparent; /*#f3f3f3*/
+	border-radius: 50%;
+	border-top: 13px solid #fba018;
+	border-bottom: 13px solid #c9e2ec;
+	width: 100px;
+	height: 100px;
+	animation: chargement 2s ease infinite;
+}
+
+
+@keyframes chargement {
+
+	0% { 
+	transform: rotate(0deg); 
+	display: none;	
+	}
+	
+	50% { transform: rotate(360deg); 
+	}
+
+	100% { transform: rotate(360deg); }
+
+}
+
+
+#hideMe {
+	width:100% ;
+	height: 2500px;
+
+	-moz-animation: cssAnimation 0s ease-in 5s forwards;
+    /* Firefox */
+    -webkit-animation: cssAnimation 0s ease-in 5s forwards;
+    /* Safari et Chrome */
+    -o-animation: cssAnimation 0s ease-in 5s forwards;
+    /* Opera et chromium*/
+    animation: cssAnimation 0s ease-in 1s forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+
+	position: absolute;
+	top: 0px;
+	right: 0px;
+
+	z-index: 42;
+}
+.loader{
+	position: relative!important;
+	bottom: 700px !important;	
+}
+@keyframes cssAnimation {
+    to {
+        width:0;
+        height:0;
+        overflow:hidden;
+    }
+}
+@-webkit-keyframes cssAnimation {
+    to {
+        width:0;
+        height:0;
+        visibility:hidden;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* #####################   old   ###################*/
+
+/*
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+*/
 
 
 

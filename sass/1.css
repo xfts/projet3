@@ -1,3 +1,12 @@
+
+/*tmp*/
+body{
+	
+	font-size: 10px;
+}
+/*tmp*/
+
+
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap");
 
 @media (min-width: 1094.98px){
@@ -212,20 +221,21 @@ section + h3 {
     padding: 10px;
 }
 /*Animation bulles */
-#boite1{
+.boite1{
     width: 90%;
 }
-#boite1 > *{
+.boite1 > *{
    padding-left: 5px; 
 
 }
 
-#boite2{
+.boite2{
     background: orange;    
     width: 20%;
     
     display:flex;
     align-items: center;
+	justify-content: center;
 
     position: relative;
     left: 20%;
@@ -240,7 +250,7 @@ section + h3 {
     transition:  transform  cubic-bezier(.2,.84,.97,.82) .6s;
 }
 
-.bulles:hover #boite2 {
+.bulles:hover .boite2 {
     opacity: 1;
     /*transform: translate(-50px);*/
     transform: translate(-100%,0) ;
@@ -249,7 +259,7 @@ section + h3 {
     transform: translate(-100%,0) ;
 }
 .bulles:hover .cercle {
-    transition: transform .5s;
+    transition: transform 1s;
     transform: rotate(360deg);
 }
 
