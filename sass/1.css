@@ -337,102 +337,6 @@ span {
 }
 
 
-
-
-.loader__food span:nth-child(1) {
-  animation: grow 1s ease-in-out infinite;
-}
-
-.loader__food span:nth-child(2) {
-  animation: grow 1s ease-in-out 0.15s infinite;
-}
-
-.loader__food span:nth-child(3) {
-  animation: grow 1s ease-in-out 0.15s infinite;
-}
-
-.loader__food span:nth-child(4) {
-  animation: grow 1s ease-in-out 0.15s infinite;
-}
-
-.loader__food span:nth-child(5) {
-  animation: grow 1s ease-in-out 0.15s infinite;
-}
-
-.loader__food span:nth-child(6) {
-  animation: grow 1s ease-in-out 0.15s infinite;
-}
-
-.loader__food span:nth-child(7) {
-  animation: grow 1s ease-in-out 0.15s infinite;
-}
-
-.loader__food span:nth-child(8) {
-  animation: grow 1s ease-in-out 0.15s infinite;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-@keyframes grow {
-  0%, 100% {
-    -webkit-transform: scaleY(1);
-    transform: scaleY(1);
-  }
-  50% {
-    -webkit-transform: scaleY(1.8);
-    transform: scaleY(1.8);
-  }
-}
-@keyframes rotate {
-  from {
-    -webkit-transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-  }
-}
-@keyframes loader {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes fill {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-
-
 .loader {
   background: -webkit-linear-gradient(#FFFFFF, #99E2D0, #FF79DA, #9356DC);
   width: 100%;
@@ -455,7 +359,7 @@ span {
 
 
 
-
+/*###########  autre exemple ###########*/
 
 .loader__food {
   vertical-align: middle;
@@ -548,22 +452,57 @@ span {
 
 
 
+/*###############################Animation############################*/
 
 
 
 
+#entrees {
+	animation: defilement 3s linear 1 both;
+
+}
+#plats {
+	animation: defilement 5s linear 1 both;
+
+}
+#dessert {
+	animation: defilement 7s linear 1 both;
+
+}
+
+@keyframes defilement{
+		from{ opacity: 0;}
+		to { opacity: 1;}
+}
 
 
+/*
+#entrees{
+}
+
+#entrees h3:nth-child(1){
+	animation: defilement 1s linear 1 both;
+
+}
+
+#entrees:nth-child(2){
+
+	animation: defilement 2s linear 1 both;
+
+}
+#entrees:nth-child(3){
+
+	animation: defilement 3s linear 2 both;
+
+}
+
+@keyframes defilement{
+		from{ opacity: 0;}
+		to { opacity: 1;}
+}
 
 
-
-
-
-
-
-
-
-
+*/
 
 
 
