@@ -60,6 +60,9 @@ body{
     #entrees, #plats, #dessert{
     width: 75%;
     }
+	.bulles{
+	height: 76px !important;
+	}
     #entrees > div{
     width: 90% !important;
     }
@@ -105,13 +108,18 @@ body{
     }
     .bulles{
     width: 90% !important;
+	height: 70px !important;
     }
     #menuTitreFlex{
 	width:100% !important;
-    }
+	}
     .menuTitre{
 	justify-content: space-between !important;
+	margin: 10px !important;
     }
+	.menuTitre  h2 ,.fa-heart{
+    font-size: 44px ;
+	}
     .boutonRose{
     width: 30% !important;
     height: 50px !important;
@@ -192,7 +200,7 @@ section + h3 {
 }
 .bulles{
     width: 60%;
-    height: 50px;
+    height: 70px;
 
     display: flex;
     justify-content: space-between;
@@ -223,6 +231,7 @@ section + h3 {
 /*Animation bulles */
 .boite1{
     width: 90%;
+    margin: 10px ;
 }
 .boite1 > *{
    padding-left: 5px; 
@@ -252,14 +261,13 @@ section + h3 {
 
 .bulles:hover .boite2 {
     opacity: 1;
-    /*transform: translate(-50px);*/
     transform: translate(-100%,0) ;
 }
 .bulles:hover .prix {
     transform: translate(-100%,0) ;
 }
 .bulles:hover .cercle {
-    transition: transform 1s;
+    transition: transform 0.6s;
     transform: rotate(360deg);
 }
 
@@ -298,17 +306,9 @@ footer> img{
     padding-left: 20px;
     margin-bottom: 18px;
 }
-
-footer ul{
-    list-style-type: none;
-    padding-left: 20px;
-    margin:0 ;
-}
-footer li{
-    margin:0 0 5px 0;
-}
-.faLi{
+.footerDiv{
     display: flex;
+	padding: 0 0 5px 15px;
 }
 .fa-hands-helping, .fa-utensils{
     width: 30px;
@@ -321,21 +321,35 @@ span {
 }
 
 
-/*#99e2d0 couleur pour h3 */ 
 
 
 
 
+#corazon{
+	transition: background 3s; 
 
-
-.fa-heart:hover{
-    
+}
+#corazon:hover{
     font-weight: bold;/*important, c'est pour avoir la couleur a l'interieur du coeur*/
-    background: linear-gradient(#ed73da, #af5fdb, #b160db);
+	background: #ed73da;/*fonctionne mais pb comme meme, voir avec mentor*/
+/*    background: linear-gradient(#ed73da, #af5fdb, #b160db); le truk a faire marche*/
     -webkit-background-clip: text;/* coeur */
     -webkit-text-fill-color: transparent;/*no se prq*/
+
 }
 
+
+/*
+.fa-heart{
+	transition: background 3s;
+}
+.fa-heart:hover{
+    font-weight: bold;/*important, c'est pour avoir la couleur a l'interieur du coeur*/
+	background: orange;
+    -webkit-background-clip: text;/* coeur */
+    -webkit-text-fill-color: transparent;/*no se prq*/
+} 
+*/
 
 .loader {
   background: -webkit-linear-gradient(#FFFFFF, #99E2D0, #FF79DA, #9356DC);
@@ -359,103 +373,55 @@ span {
 
 
 
-/*###########  autre exemple ###########*/
-
-.loader__food {
-  vertical-align: middle;
-  position: absolute;
-  top: 40%;
-  left: 20%;
-}
-@media screen and (min-width: 768px) {
-  .loader__food {
-    top: 40%;
-    left: 35%;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .loader__food {
-    top: 40%;
-    left: 45%;
-  }
-}
-
-.loader__food span {
-  display: inline-block;
-  width: 5px;
-  height: 20px;
-  padding-right: 1em;
-}
-
-.loader__fork {
-  vertical-align: middle;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  animation: rotate 1s linear infinite;
-}
-
-.loader__food span:nth-child(1) {
-  animation: grow 1s ease-in-out infinite;
-}
-
-.loader__food span:nth-child(2) {
-  animation: grow 1s ease-in-out 0.15s infinite;
-}
-
-.loader__food span:nth-child(3) {
-  animation: grow 1s ease-in-out 0.15s infinite;
-}
-
-.loader__food span:nth-child(4) {
-  animation: grow 1s ease-in-out 0.15s infinite;
-}
-
-.loader__food span:nth-child(5) {
-  animation: grow 1s ease-in-out 0.15s infinite;
-}
-
-.loader__food span:nth-child(6) {
-  animation: grow 1s ease-in-out 0.15s infinite;
-}
-
-.loader__food span:nth-child(7) {
-  animation: grow 1s ease-in-out 0.15s infinite;
-}
-
-.loader__food span:nth-child(8) {
-  animation: grow 1s ease-in-out 0.15s infinite;
-}
-
-
-.starter {
-  animation: fadein 3s ease-in-out;
-}
-@media screen and (min-width: 1280px) {
-  .starter {
-    width: 400px;
-  }
-}
-
-.dish {
-  animation: fadein 6s ease-in-out;
-}
-
-
-.dessert {
-  animation: fadein 9s ease-in-out;
-}
-
-
-
-
-
-
 
 /*###############################Animation############################*/
 
 
 
+/* resultat final 2*/
+
+@keyframes defilement{
+		from{ opacity: 0;}
+		to { opacity: 1;}
+}
+
+#entrees :nth-child(3){
+	animation: defilement 1s linear 1 both;
+}
+#entrees :nth-child(4){
+	animation: defilement 2s linear 1 both;
+}
+#entrees :nth-child(5){
+	animation: defilement 3s linear 1 both;
+}
+#entrees :nth-child(6){
+	animation: defilement 4s linear 1 both;
+}
+
+		
+#plats :nth-child(3){
+	animation: defilement 1s linear 1 both;
+}
+#plats :nth-child(4){
+	animation: defilement 2s linear 1 both;
+}
+#plats :nth-child(5){
+	animation: defilement 3s linear 1 both;
+}
+
+
+#dessert :nth-child(3){
+	animation: defilement 1s linear 1 both;
+}
+#dessert :nth-child(4){
+	animation: defilement 2s linear 1 both;
+}
+#dessert :nth-child(5){
+	animation: defilement 3s linear 1 both;
+}
+		
+
+/* resultat final 1
 
 #entrees {
 	animation: defilement 3s linear 1 both;
@@ -474,35 +440,22 @@ span {
 		from{ opacity: 0;}
 		to { opacity: 1;}
 }
-
-
-/*
-#entrees{
-}
-
-#entrees h3:nth-child(1){
-	animation: defilement 1s linear 1 both;
-
-}
-
-#entrees:nth-child(2){
-
-	animation: defilement 2s linear 1 both;
-
-}
-#entrees:nth-child(3){
-
-	animation: defilement 3s linear 2 both;
-
-}
-
-@keyframes defilement{
-		from{ opacity: 0;}
-		to { opacity: 1;}
-}
-
-
 */
+
+
+
+
+
+
+
+.boite1 > span{
+	text-transform: uppercase;
+	overflow: hidden;
+}
+
+
+
+
 
 
 

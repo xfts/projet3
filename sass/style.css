@@ -70,7 +70,13 @@ body{
     a > img{
     height: 200px !important;
     }
-    
+	.nouveauDiv{
+	top: 10px !important;
+	right: 12px !important;
+	width: 91px !important;
+	height: 40px !important;
+	font-size: 10px !important;
+	}
 }
 
 @media (max-width: 649.98px){
@@ -119,6 +125,12 @@ body{
     width: 100%;
     height: 70% !important;
     }
+	.nouveauDiv{
+	top: 20px !important;
+	right: 20px;
+	width: 91px;
+	height: 40px;
+	}
     footer {
     padding-left: 35px !important;
     }
@@ -240,6 +252,7 @@ main{
     width: 40%;
     height: 50%;
     margin-bottom: 15px;
+	position: relative;
 }
 a > img{
     object-fit: cover;
@@ -247,6 +260,23 @@ a > img{
     height: 80%;
     border: solid white 0px;
     border-radius: 10px 10px 0 0;
+}
+.nouveauDiv{ 
+	background:#99E2D0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	position: absolute;
+	top: 40px;
+	right: 20px;
+	width: 111px;
+	height: 45px;
+
+}
+.nouveauDiv > span{
+	color: green;
+	font-weight: bold;
 }
 .restaurantBulleSpan{
     display:flex;
@@ -256,7 +286,7 @@ a > img{
 .restaurantBulleSpan >  div{
     margin: 2% 0 3% 2%
 }
-.restaurantBulleSpan > .corazon{
+.restaurantBulleSpan > .corazonDiv{
     margin: 4% 4% 0  0
 
 }
@@ -264,33 +294,25 @@ a > img{
     transform: scale(1.027);
 }
 
-
-
-
 footer{
     padding-top: 30px;
-    border: solid 2px white;
+    padding-bottom: 35px !important;
     height: 30%;
+    border: solid 1px white;
+    background-color: #3e3e3e;
 }
 footer> img{
-    height: 20%;
-    margin: 0;
-}
-footer ul{
-    list-style-type: none;
-}
-footer li{
-    margin-bottom: 5px;
-}
-ul{
-    padding:0 !important;
-    }.faLi{
-    display: flex;
+    height: 15%;
+    padding-left: 10px;
+    margin-bottom: 18px;
 }
 .fa-hands-helping, .fa-utensils{
     width: 30px;
 }
 
+
+/*1.css aucun pb, ici, pb */
+footer .footerDiv{margin-bottom:4px;}
 
 
 
@@ -371,13 +393,13 @@ span{color:orange;}
 	width:100% ;
 	height: 2500px;
 
-	-moz-animation: cssAnimation 0s ease-in 5s forwards;
+	-moz-animation: cssAnimation 0s ease-in 2s forwards;
     /* Firefox */
-    -webkit-animation: cssAnimation 0s ease-in 5s forwards;
+    -webkit-animation: cssAnimation 0s ease-in 2s forwards;
     /* Safari et Chrome */
-    -o-animation: cssAnimation 0s ease-in 5s forwards;
+    -o-animation: cssAnimation 0s ease-in 2s forwards;
     /* Opera et chromium*/
-    animation: cssAnimation 0s ease-in 1s forwards;
+    animation: cssAnimation 0s ease-in 0s forwards;/*tmp remetre une valeur entre 1 et 3*/
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
 
@@ -409,34 +431,6 @@ span{color:orange;}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* #####################   old   ###################*/
-
-/*
-*{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-*/
 
 
 
