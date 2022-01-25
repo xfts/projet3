@@ -21,17 +21,14 @@ body{
     display: flex;
     flex-direction: column;
     align-items:center;
+    padding-right: 0px !important;
+    padding-left: 0 !important;
     }
     header > img{
     height: 80px !important;
     }
-    header, #reservezLeMenu {
-    padding-right: 0px !important;
-    padding-left: 0 !important;
-    }
     #reservezLeMenu{
     width: 100% !important;
-    margin-left: 2% ;
     }
     #localisation{
     width: 100% !important;
@@ -145,8 +142,6 @@ body{
 
 
 body{
-    background-color: #333333;
-    color: white;
     font-family: "Raleway", "Sans serif";
     margin: auto;
 }
@@ -184,6 +179,7 @@ header > img{
     justify-content: center;
     align-items: center;/*axe secondaire*/
     
+	color: white;
     background: linear-gradient(#ed73da, #af5fdb, #b160db);
 }
 .boutonRose:hover{
@@ -192,12 +188,20 @@ header > img{
 }
 #reservezLeMenu{
     padding: 20px 0 30px 0;
+	background: #f6f6f6;
+}
+#reservezLeMenu > h3{
+	font-weight: normal;
+}
+#reservezLeMenu  h1 {
+	padding-left: 20px;
+}
+#reservezLeMenu  h3 {
+	padding-left: 20px;
 }
 main{
     padding-top: 30px;
     border: solid 1px white;
-    padding-bottom: 100px;
-    background: #111;
 }
 #section1{
     display:flex;
@@ -215,6 +219,8 @@ main{
     border: solid white 2px;
     border-radius: 20px 20px 20px 20px ;
     width: 30%;
+	box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 13%);
+	background: #f6f6f6;
 }
 .fonctionnementChoix:hover{
     color: black;
@@ -232,10 +238,19 @@ main{
     border-radius: 100%;
     min-height: 25px;
     min-width: 25px;
+	
+	line-height: 0;
+
+}
+.fonctionnementChoix > span{
+	font-weight: bold;
+
 }
 #section2{
     border: solid white 1px; 
     padding: 30px 0 30px 0;
+	background: #f6f6f6;
+	padding-bottom: 200px;
 }	
 #section2 > h1{
     width: 70%;
@@ -253,6 +268,7 @@ main{
     height: 50%;
     margin-bottom: 15px;
 	position: relative;
+	box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 13%);
 }
 a > img{
     object-fit: cover;
@@ -295,16 +311,18 @@ a > img{
 }
 
 footer{
-    padding-top: 30px;
+    padding-top: 40px;
     padding-bottom: 35px !important;
+	color: white;
     height: 30%;
-    border: solid 1px white;
-    background-color: #3e3e3e;
+    border: solid 1px none;
+    background-color: #353535; /*#3e3e3e;*/
 }
 footer> img{
     height: 15%;
     padding-left: 10px;
     margin-bottom: 18px;
+	filter: invert(1) ;
 }
 .fa-hands-helping, .fa-utensils{
     width: 30px;
@@ -318,7 +336,6 @@ footer .footerDiv{margin-bottom:4px;}
 
 
 
-span{color:orange;}
 
 
 .fa-heart:hover{
@@ -399,7 +416,7 @@ span{color:orange;}
     /* Safari et Chrome */
     -o-animation: cssAnimation 0s ease-in 2s forwards;
     /* Opera et chromium*/
-    animation: cssAnimation 0s ease-in 0s forwards;/*tmp remetre une valeur entre 1 et 3*/
+    animation: cssAnimation 0s ease-in 1.2s forwards;/*tmp remetre une valeur entre 1 et 3*/
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
 
