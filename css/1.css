@@ -1,13 +1,17 @@
-
-/*tmp*/
-body{
-	
-	font-size: 10px;
-}
-/*tmp*/
-
-
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap");
+
+@font-face{
+	font-family: 'roboto';
+	src: url('../font/Roboto-Regular.ttf');
+}
+@font-face{
+	font-family: 'roboto-thin';
+	src: url('../font/Roboto-Thin.ttf');
+}
+@font-face{
+	font-family: 'shrikhand';
+	src: url('../font/Shrikhand-Regular.ttf');
+}
 
 @media (min-width: 1094.98px){
     body{
@@ -29,6 +33,9 @@ body{
     width: 100% !important;
     padding-left: 3% ;
     }
+	.surligner{
+	width: 10% !important;
+	}
     #entrees{
     width: 45% !important;
     }
@@ -90,8 +97,25 @@ body{
 
 @media (max-width: 649.98px){
     body{
+	font-size: 12px !important;
     }
-    
+	header{
+	padding-bottom:40px !important;
+	padding-top:40px !important;
+	}
+	.logoTitreFlex{
+	position: absolute;
+	z-index: 10;
+	}
+	.fa-arrow-left {
+    padding-left: 17px;
+	position: absolute;
+	top: 27px;
+	left: 0 ;
+	}
+    #general > *{
+	margin-left: 0 !important;
+	}
     main{
 	padding-top: 0 !important
     }
@@ -103,9 +127,12 @@ body{
 	display: flex;
 	flex-direction: column;
 	align-items: stretch;
-	padding: 30px 20px 0 20px !important;
+	padding: 30px 20px 80px 20px !important;
 	
     }
+	.surligner{
+	width: 30px !important;
+	}
     .bulles{
     width: 90% !important;
 	height: 70px !important;
@@ -115,10 +142,10 @@ body{
 	}
     .menuTitre{
 	justify-content: space-between !important;
-	margin: 10px !important;
+	margin: 10px 10px 0 10px !important;
     }
 	.menuTitre  h2 ,.fa-heart{
-    font-size: 44px ;
+    font-size: 26px ;
 	}
     .boutonRose{
     width: 30% !important;
@@ -127,11 +154,15 @@ body{
     }
     footer> img{
     min-width: 9px !important;
+	height: 22px !important;
     }
+	.fa-hands-helping, .fa-utensils{
+    width: 24px !important;
+	}
 }
 
 body{
-    font-family: "Raleway", "Sans serif";
+    font-family: "roboto", "Sans serif";
     margin: auto;
 }
 header{
@@ -149,6 +180,7 @@ header{
     display: flex;
     justify-content: center;
     width: 100%;
+	
 }
 header > div *{
     width: 50%;
@@ -172,7 +204,8 @@ header > div *{
     align-items: center;
     margin-bottom: 20px;
     font-size: x-large ;
-    font-style: italic;
+    font-family: "shrikhand";
+    font-weight: normal;/*important, c'est pour avoir la couleur a l'interieur du coeur*/
     width: 100%;
 }
 #general{
@@ -191,6 +224,10 @@ section + h3 {
     border-bottom: 3px white solid; 
     
 }
+#entrees > h3,#plats > h3,#dessert > h3{
+	font-family: "roboto-thin";
+}
+
 .surligner{
     background: #99e2d0;
     border: solid #99e2d0 2px;
@@ -287,17 +324,18 @@ section + h3 {
     
 	color: white;
     background: linear-gradient(#ed73da, #af5fdb, #b160db);
+	box-shadow: 0 2px 3px grey;
 }
 .boutonRose:hover{
     color: orange;
     transform: scale(1.027);
+	box-shadow: 0 2px 2px 1px grey;
 }
 footer{
     padding-top: 40px;
     padding-bottom: 35px !important;
     color: white;
     height: 30%;
-    border: solid 1px none;
     background-color: #353535;
 }
 footer> img{
@@ -310,8 +348,12 @@ footer> img{
     display: flex;
 	padding: 0 0 5px 15px;
 }
+.footerDiv a{
+	color: white;
+	text-decoration: none;/*enlever le surlignage*/
+}
 .fa-hands-helping, .fa-utensils{
-    width: 30px;
+    width: 37px;
 }
 
 
