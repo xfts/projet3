@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap");
 
+/*tmp black theme for eyes */
+/*body,main,section {background: black !important;color:white !important; }*/
+
+/*.bulles {color:black !important; }*/
+/*tmp*/
+
 @font-face{
 	font-family: 'roboto';
 	src: url('../font/Roboto-Regular.ttf');
@@ -45,6 +51,9 @@
     #dessert{
     width: 45% !important;
     }
+	.fa-check-circle{
+	font-size: 22px !important;
+	}
     #boutonRoseFlex{
     width: 60% !important;
     }
@@ -68,7 +77,7 @@
     width: 75%;
     }
 	.bulles{
-	height: 76px !important;
+	height: 72px !important;
 	}
     #entrees > div{
     width: 90% !important;
@@ -79,6 +88,9 @@
     #dessert > div{
     width: 70% !important;
     }
+	.fa-check-circle{
+	font-size: 27px !important;
+	}
     .boutonRose{
     width: 45% !important;
     height: 50px !important;
@@ -135,8 +147,21 @@
 	}
     .bulles{
     width: 90% !important;
-	height: 70px !important;
+	height: 60px !important;
     }
+	.boite1{
+	margin: 2px !important;
+	}
+	.petitesBulles{
+	align-items: flex-end !important;
+	}
+	.prix{
+	padding-bottom: 34%;
+	font-weight: bold;
+	}
+	strong{
+	font-size: 15px !important;
+	}
     #menuTitreFlex{
 	width:100% !important;
 	}
@@ -240,20 +265,22 @@ section + h3 {
 
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
+	
+	margin-bottom: 20px;
 
-    border: solid 1px none;
+    border: none 1px white;
     border-radius: 10px 10px 10px 10px;
     overflow: hidden;
 	box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 13%);
 	background: #ffffff;
 }
 .petitesBulles{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+    width: 50px;
+	height: 100%;
     
-    align-items: baseline; 
+	display: flex;
+    align-items: center; 
+	justify-content: flex-end;
 }
 .textSpan {
     width: 30%;
@@ -265,16 +292,29 @@ section + h3 {
     overflow: hidden;
     padding: 10px;
 }
-/*Animation bulles */
+/*################################### Animation bulles ###################################*/
 .boite1{
-    width: 90%;
+    width: 100% !important;
     margin: 10px ;
+	
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	transition: width cubic-bezier(.2,.84,.97,.82) .6s;
 }
 .boite1 > *{
    padding-left: 5px; 
-
 }
-
+.hiddenBox {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+.hiddenBox, .hiddenText{
+	overflow: hidden; 
+  	text-overflow: ellipsis; 
+	white-space: nowrap;
+}
 .boite2{
     background: #99E2D0;    
     width: 20%;
@@ -292,22 +332,18 @@ section + h3 {
 .cercle{
     color: white;
 }
-.prix{ 
-    transition:  transform  cubic-bezier(.2,.84,.97,.82) .6s;
+.bulles:hover .boite1 {
+	width: 70% !important ;
 }
-
 .bulles:hover .boite2 {
     opacity: 1;
-    transform: translate(-100%,0) ;
-}
-.bulles:hover .prix {
     transform: translate(-100%,0) ;
 }
 .bulles:hover .cercle {
     transition: transform 0.6s;
     transform: rotate(360deg);
 }
-
+/*################################### Animation bulles ###################################*/
 #boutonRoseFlex{
     display: flex;
     justify-content: center;
@@ -327,8 +363,8 @@ section + h3 {
 	box-shadow: 0 2px 3px grey;
 }
 .boutonRose:hover{
-    color: orange;
     transform: scale(1.027);
+    background: linear-gradient(#ed90de, #c28edf, #b375d3);
 	box-shadow: 0 2px 2px 1px grey;
 }
 footer{
@@ -378,17 +414,6 @@ footer> img{
 }
 
 
-/*
-.fa-heart{
-	transition: background 3s;
-}
-.fa-heart:hover{
-    font-weight: bold;/*important, c'est pour avoir la couleur a l'interieur du coeur*/
-	background: orange;
-    -webkit-background-clip: text;/* coeur */
-    -webkit-text-fill-color: transparent;/*no se prq*/
-} 
-*/
 
 .loader {
   background: -webkit-linear-gradient(#FFFFFF, #99E2D0, #FF79DA, #9356DC);
@@ -485,15 +510,29 @@ footer> img{
 
 
 
+/* corazon*/
+/* maybe the solution: */
+/*
+opacity: 0;
+background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+background: linear-gradient(#9356dc, #ff79da);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+-webkit-transition: opacity 1000ms;
+transition: opacity 1000ms;
+*/
+/* corazon*/
 
-
-.boite1 > span{
-	text-transform: uppercase;
-	overflow: hidden;
-}
-
-
-
+/*
+.fa-heart{
+	transition: background 3s;}
+.fa-heart:hover{
+    font-weight: bold;/*important, c'est pour avoir la couleur a l'interieur du coeur*/
+/*	background: orange;*/
+/*    -webkit-background-clip: text;*//* coeur */
+/*    -webkit-text-fill-color: transparent;}*//*no se prq*/
+ 
 
 
 

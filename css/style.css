@@ -199,8 +199,9 @@ header > img{
 	box-shadow: 0 2px 3px grey;
 }
 .boutonRose:hover{
-    color: orange;
     transform: scale(1.027);
+    background: linear-gradient(#ed90de, #c28edf, #b375d3);
+	box-shadow: 0 2px 2px 1px grey;
 }
 #reservezLeMenu{
     padding: 20px 0 55px 0;
@@ -409,7 +410,7 @@ footer> img{
 		background-color: #363636;
 	}
 	100%{
-		background-color: opacity;/*a regler */
+		background-color: white;/*a regler */
 		/*demander mentor pour le display : none SURTOUT*/
 	}
 }
@@ -451,7 +452,7 @@ footer> img{
     /* Safari et Chrome */
     -o-animation: cssAnimation 0s ease-in 2s forwards;
     /* Opera et chromium*/
-    animation: cssAnimation 0s ease-in 0s forwards;/*tmp remetre une valeur entre 1 et 3*/
+    animation: cssAnimation 0s ease-in 2s forwards;/*tmp remetre une valeur entre 1 et 3*/
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
 
