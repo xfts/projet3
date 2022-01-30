@@ -294,13 +294,14 @@ section + h3 {
 }
 /*################################### Animation bulles ###################################*/
 .boite1{
-    width: 100% !important;
+    width: 400% !important;
     margin: 10px ;
 	
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	transition: width cubic-bezier(.2,.84,.97,.82) .6s;
+	transition: width cubic-bezier(0, 0.49, 0, 0.89) .6s; 
+/*	transition: width cubic-bezier(.2,.84,.97,.82) .6s;*/
 }
 .boite1 > *{
    padding-left: 5px; 
@@ -340,10 +341,17 @@ section + h3 {
     transform: translate(-100%,0) ;
 }
 .bulles:hover .cercle {
-    transition: transform 0.6s;
+    transition: transform .9s;
     transform: rotate(360deg);
 }
 /*################################### Animation bulles ###################################*/
+
+
+
+
+
+
+
 #boutonRoseFlex{
     display: flex;
     justify-content: center;
@@ -398,20 +406,6 @@ footer> img{
 
 
 
-
-
-#corazon{
-	transition: background 3s; 
-
-}
-#corazon:hover{
-    font-weight: bold;/*important, c'est pour avoir la couleur a l'interieur du coeur*/
-	background: #ed73da;/*fonctionne mais pb comme meme, voir avec mentor*/
-/*    background: linear-gradient(#ed73da, #af5fdb, #b160db); le truk a faire marche*/
-    -webkit-background-clip: text;/* coeur */
-    -webkit-text-fill-color: transparent;/*no se prq*/
-
-}
 
 
 
@@ -506,35 +500,41 @@ footer> img{
 }
 */
 
-
-
-
-
-/* corazon*/
-/* maybe the solution: */
-/*
-opacity: 0;
-background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
-background: linear-gradient(#9356dc, #ff79da);
-background-clip: text;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
--webkit-transition: opacity 1000ms;
-transition: opacity 1000ms;
-*/
-/* corazon*/
-
-/*
-.fa-heart{
-	transition: background 3s;}
-.fa-heart:hover{
-    font-weight: bold;/*important, c'est pour avoir la couleur a l'interieur du coeur*/
-/*	background: orange;*/
-/*    -webkit-background-clip: text;*//* coeur */
-/*    -webkit-text-fill-color: transparent;}*//*no se prq*/
  
 
-
+.fa-heart:hover{
+	animation-name: animeCorazon;
+	animation-duration: 4.9s;
+	animation-fill-mode:both;
+	animation-iteration-count:1;
+	
+}
+@keyframes animeCorazon{
+	0%{
+		background:#f6f6f6;
+		font-weight: bold;/*important, c'est pour avoir la couleur a l'interieur du coeur*/
+    	-webkit-background-clip: text;/* coeur */
+    	-webkit-text-fill-color: transparent;/*no se prq*/
+	}
+	25%{
+		background:#ed73da;
+		font-weight: bold;
+    	-webkit-background-clip: text;
+    	-webkit-text-fill-color: transparent;
+	}
+	50%{
+		background:#af5fdb;
+		font-weight: bold;
+    	-webkit-background-clip: text;
+    	-webkit-text-fill-color: transparent;
+	}
+	100%{
+		background:#b160db; 
+		font-weight: bold;
+    	-webkit-background-clip: text;
+    	-webkit-text-fill-color: transparent;
+	}
+}
 
 
 

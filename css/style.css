@@ -374,14 +374,6 @@ footer> img{
 	/*transition: */
 }
 
-.fa-heart:hover{
-    transform:scale(1.1);
-    
-    font-weight: bold;/*important, c'est pour avoir la couleur a l'interieur du coeur*/
-    background: linear-gradient(#ed73da, #af5fdb, #b160db);
-    -webkit-background-clip: text;/* coeur */
-    -webkit-text-fill-color: transparent;/*no se prq*/
-}
 
 
 
@@ -483,6 +475,40 @@ footer> img{
 
 
 
+
+.fa-heart:hover{
+	animation-name: animeCorazon;
+	animation-duration: 4.9s;
+	animation-fill-mode:both;
+	animation-iteration-count:1;
+	
+}
+@keyframes animeCorazon{
+	0%{
+		background:#f6f6f6;
+		font-weight: bold;/*important, c'est pour avoir la couleur a l'interieur du coeur*/
+    	-webkit-background-clip: text;/* coeur */
+    	-webkit-text-fill-color: transparent;/*no se prq*/
+	}
+	25%{
+		background:#ed73da;
+		font-weight: bold;
+    	-webkit-background-clip: text;
+    	-webkit-text-fill-color: transparent;
+	}
+	50%{
+		background:#af5fdb;
+		font-weight: bold;
+    	-webkit-background-clip: text;
+    	-webkit-text-fill-color: transparent;
+	}
+	100%{
+		background:#b160db; 
+		font-weight: bold;
+    	-webkit-background-clip: text;
+    	-webkit-text-fill-color: transparent;
+	}
+}
 
 
 
