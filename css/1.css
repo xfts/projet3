@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap");
 
 /*tmp black theme for eyes */
-body,main,section {background: black !important;color:white !important; }
+/*body,main,section {background: black !important;color:white !important; }*/
 
-.bulles {color:black !important; }
+/*.bulles {color:black !important; }*/
 /*tmp*/
 
 @font-face{
